@@ -1,0 +1,41 @@
+
+
+<ion-toolbar color="secondary">
+  <ion-buttons slot="start">
+    <ion-button (click)='back()'>
+      <ion-icon  name="arrow-back"></ion-icon>
+    </ion-button>
+    
+  </ion-buttons>
+
+  <ion-title>Post Details</ion-title>
+</ion-toolbar>
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Header</ion-label>
+    <ion-input [(ngModel)]="post.Header"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Content</ion-label>
+    <!-- <ion-input [(ngModel)]="post.Content"></ion-input> -->
+    <editor [apiKey]="appconfig.TinyMceAPIKey" plugins="image imagetools" [(ngModel)]="post.Content"></editor>
+
+    <!-- <editor [(ngModel)]="post.Content"
+    [apiKey]="appconfig.TinyMceAPIKey"
+  [init]="{
+    icons: 'material',
+    skin: 'borderless',
+    plugins: 'wordcount',
+    menubar: false,
+    min_height: 150,
+    min_width: 1000
+  }"
+></editor> -->
+  </ion-item>
+ 
+
+    <ion-button color="primary" (click)='InsertPost()'>Save</ion-button>
+
+  
+</ion-content>

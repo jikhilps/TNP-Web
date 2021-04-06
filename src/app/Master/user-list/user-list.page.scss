@@ -1,0 +1,14 @@
+/* DOES NOT WORK - not specific enough */
+.alert-wrapper {
+    background: #006600
+  }
+  
+  /* Works - pass "my-custom-class" in cssClass to increase specificity */
+  .my-custom-class  {
+    background:#006600;
+  }
+
+  .cancel-btn
+  {
+    --ion-color-secondary-rgb: 0,102,0;
+  }
